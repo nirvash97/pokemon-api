@@ -14,6 +14,7 @@ app.get("/", (req, res) => res.send("Hello World! Pokemon"));
 app.get("/pokemons", (req, res) => res.send(pokemon));
 app.post("/pokemons",(req,res) => 
 {
+    console.log(req.body)
     pokemon.push(req.body)
     res.sendStatus(201)
 })
